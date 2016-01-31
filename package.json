@@ -21,7 +21,8 @@
     "onCommand:typings.init",
     "onCommand:typings.uninstall",
     "onCommand:typings.list",
-    "onCommand:typings.bundle"
+    "onCommand:typings.bundle",
+    "onCommand:typings.runAny"
   ],
   "main": "./out/src/extension",
   "contributes": {
@@ -49,6 +50,10 @@
       {
         "command": "typings.bundle",
         "title": "Typings : Bundle the current project types into an single ambient module"
+      },
+      {
+        "command": "typings.runAny",
+        "title": "Typings : run any commands as in command line"
       }
     ]
   },
