@@ -1,0 +1,7 @@
+{
+  "dependencies": {},
+  "devDependencies": {},
+  "ambientDependencies": {
+    "bluebird": "github:DefinitelyTyped/DefinitelyTyped/bluebird/bluebird.d.ts#8d852210cf8378ac5fe11380b5d1d17f2e5b0968"
+  }
+}

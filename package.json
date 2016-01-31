@@ -4,6 +4,11 @@
   "description": "Happy coding with the help of typings (https://github.com/typings/typings)",
   "version": "0.0.2",
   "publisher": "typings",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/typings/vscode-typings.git"
+  },
+  "license": "MIT",
   "engines": {
     "vscode": "^0.10.1"
   },
@@ -55,5 +60,7 @@
     "typescript": "^1.6.2",
     "vscode": "0.10.x"
   },
-  "dependencies": {}
+  "dependencies": {
+    "bluebird": "^3.1.5"
+  }
 }
