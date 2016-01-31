@@ -43,7 +43,7 @@
       },
       {
         "command": "typings.bundle",
-        "title": "Typings : Bunel the current project types into an single ambient module"
+        "title": "Typings : Bundle the current project types into an single ambient module"
       }
     ]
   },
