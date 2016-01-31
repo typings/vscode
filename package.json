@@ -2,7 +2,7 @@
   "name": "vscode-typings",
   "displayName": "Typings",
   "description": "Coming Soon: Happy coding with typings (https://github.com/typings/typings)",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "publisher": "typings",
   "repository": {
     "type": "git",
