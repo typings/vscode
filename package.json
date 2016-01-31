@@ -8,7 +8,7 @@
     "vscode": "^0.10.1"
   },
   "categories": [
-    "Other"
+    "Languages"
   ],
   "activationEvents": [
     "onCommand:typings.search",
@@ -56,6 +56,5 @@
     "vscode": "0.10.x"
   },
   "dependencies": {
-    "typings": "^0.6.3"
   }
 }
