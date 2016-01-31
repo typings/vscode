@@ -1,0 +1,61 @@
+{
+  "name": "vscode-typings",
+  "displayName": "Typings",
+  "description": "Happy coding with the help of typings (https://github.com/typings/typings)",
+  "version": "0.0.1",
+  "publisher": "typings",
+  "engines": {
+    "vscode": "^0.10.1"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:typings.search",
+    "onCommand:typings.install",
+    "onCommand:typings.init",
+    "onCommand:typings.uninstall",
+    "onCommand:typings.list",
+    "onCommand:typings.bundle"
+  ],
+  "main": "./out/src/extension",
+  "contributes": {
+    "commands": [
+      {
+        "command": "typings.search",
+        "title": "Typings : Search for definitions"
+      },
+      {
+        "command": "typings.install",
+        "title": "Typings : Install typings"
+      },
+      {
+        "command": "typings.init",
+        "title": "Typings : Initialize 'typings.json'"
+      },
+      {
+        "command": "typings.uninstall",
+        "title": "Typings : Removes a typings"
+      },
+      {
+        "command": "typings.list",
+        "title": "Typings : Show all installed typings"
+      },
+      {
+        "command": "typings.bundle",
+        "title": "Typings : Bunel the current project types into an single ambient module"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "node ./node_modules/vscode/bin/compile",
+    "compile": "node ./node_modules/vscode/bin/compile -watch -p ./"
+  },
+  "devDependencies": {
+    "typescript": "^1.6.2",
+    "vscode": "0.10.x"
+  },
+  "dependencies": {
+    "typings": "^0.6.3"
+  }
+}
