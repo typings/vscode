@@ -6,7 +6,7 @@
   "publisher": "typings",
   "repository": {
     "type": "git",
-    "url": "https://github.com/typings/vscode-typings.git"
+    "url": "https://github.com/typings/vscode.git"
   },
   "license": "MIT",
   "engines": {
