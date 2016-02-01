@@ -2,6 +2,7 @@
   "dependencies": {},
   "devDependencies": {},
   "ambientDependencies": {
-    "bluebird": "github:DefinitelyTyped/DefinitelyTyped/bluebird/bluebird.d.ts#8d852210cf8378ac5fe11380b5d1d17f2e5b0968"
+    "bluebird": "github:DefinitelyTyped/DefinitelyTyped/bluebird/bluebird.d.ts#8d852210cf8378ac5fe11380b5d1d17f2e5b0968",
+    "node": "github:DefinitelyTyped/DefinitelyTyped/node/node.d.ts#1c56e368e17bb28ca57577250624ca5bd561aa81"
   }
 }
