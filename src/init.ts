@@ -1,35 +1,37 @@
 import * as vscode from 'vscode';
-import * as childProcess from 'child_process';
-import 'bluebird';
-
-function initFn(rootPath): Promise<any> {
-  return new Promise((resolve, reject) => {
-    childProcess.exec('typings init',
-      { cwd: rootPath },
-      (error, stdout, stderr) => {
-        if (stderr) {
-          reject(new Error('typings.json already exists'));
-        }
-        else {
-          resolve();
-        }
-      }
-    )
-  });
-}
+import { init } from 'typings-core';
 
 export var initCommand = {
   name: 'typings.init',
-  fn: function init(context) {
+  fn: function initFn(context) {
     if (!vscode.workspace.rootPath) {
-      vscode.window.showInformationMessage('No folder opened');
-      return;
+      return vscode.window.showInformationMessage('No folder opened');
     }
 
-    initFn(vscode.workspace.rootPath).then(() => {
-        vscode.window.showInformationMessage('typings.json created');
-    }).catch((err)=> {
-        vscode.window.showErrorMessage('typings.json already exists');
-    });
+    return vscode.workspace.findFiles('tsd.json', null, 1)
+      .then((uriSet) => {
+        if (uriSet.length > 0) {
+          return vscode.window.showInformationMessage('Found tsd.json, do you want to upgrade?', 'No', 'Yes')
+            .then((response) => {
+              return response === 'Yes';
+            });
+        }
+
+        return false;
+      })
+      .then((upgrade) => {
+        return init({
+          cwd: vscode.workspace.rootPath,
+          upgrade
+        }).then(() => {
+          if (upgrade) {
+            // TODO: delete the file automatically?
+            return vscode.window.showInformationMessage('Upgrade completed. You can delete tsd.json. Happy coding!');
+          }
+          else {
+            return vscode.window.showInformationMessage('Initialize completed. Happy coding!');
+          }
+        });
+      });
   }
 };

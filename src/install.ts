@@ -1,26 +1,24 @@
 import * as vscode from 'vscode';
-import * as childProcess from 'child_process';
 
-
-function installFn() {
-  return new Promise((resolve, reject) => {
-    let cmd = 'typings install';
-    childProcess.exec(cmd, (error, stdio, stderr) => {
-      console.log(error, stdio, stderr);
-      resolve();
-    });
-  })
-}
+import {installDependency} from 'typings-core';
 
 export var installCommand = {
   name: 'typings.install',
-  fn: function install(context) {
+  fn: function installFn(context) {
     if (!vscode.workspace.rootPath) {
-      vscode.window.showInformationMessage('No folder opened');
-      return;
+      return vscode.window.showInformationMessage('No folder opened');
     }
-    vscode.window.showInformationMessage('Will be ready real soon!');
 
+
+
+// installDependency({name, location}, {cwd: vscode.workspace.rootPath, save,ambient});
+
+    // vscode.window.showInformationMessage('Will be ready real soon!');
+    // installFn().then((result) => {
+    //   console.log('result', result);
+    // }).catch((error) => {
+    //   console.log('error', error);
+    // });
     // vscode.window.showQuickPick([
     //   'from registry',
     //   'npm',

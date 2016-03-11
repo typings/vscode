@@ -5,7 +5,7 @@ import * as vscode from 'vscode';
 import {bundleCommand} from './bundle';
 import {initCommand} from './init';
 import {installCommand} from './install';
-import {listCommand} from './ls';
+import {listCommand} from './view';
 import {runAnyCommand} from './run-any';
 import {searchCommand} from './search';
 import {uninstallCommand} from './uninstall';

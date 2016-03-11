@@ -1,7 +1,7 @@
 import * as vscode from 'vscode';
 
 export var listCommand = {
-  name: 'typings.list',
+  name: 'typings.view',
   fn: function list(context) {
     if (!vscode.workspace.rootPath) {
       vscode.window.showInformationMessage('No folder opened');
