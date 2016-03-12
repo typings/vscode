@@ -13,7 +13,7 @@ before_install:
 
 install:
   - npm install
-  - typings install
+  - node script/setup.js
   - npm run vscode:prepublish
 
 script:
