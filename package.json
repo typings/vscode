@@ -37,7 +37,7 @@
       },
       {
         "command": "typings.init",
-        "title": "Typings : Initialize 'typings.json'"
+        "title": "Typings : Initialize typings.json"
       },
       {
         "command": "typings.uninstall",
@@ -59,12 +59,13 @@
   },
   "scripts": {
     "vscode:prepublish": "node ./node_modules/vscode/bin/compile",
-    "compile": "node ./node_modules/vscode/bin/compile -watch -p ./"
+    "compile": "node ./node_modules/vscode/bin/compile -watch -p ./",
+    "test": "node ./node_modules/vscode/bin/test"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-tslint": "^4.3.3",
-    "tslint": "github:unional/tslint",
+    "tslint": "git://github.com/unional/tslint.git",
     "tslint-config-unional": "^0.1.3",
     "typescript": "^1.6.2",
     "vscode": "0.10.x"
