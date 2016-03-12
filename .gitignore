@@ -38,6 +38,10 @@ node_modules
 
 # typings
 typings
+custom-typings
 
 # output folder
 out
+
+# vscode
+.vscode-test
