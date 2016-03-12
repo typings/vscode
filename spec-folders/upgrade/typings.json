@@ -1,0 +1,5 @@
+{
+  "ambientDependencies": {
+    "debug": "github:DefinitelyTyped/DefinitelyTyped/debug/debug.d.ts#0d622d857f97d44ea7dcad2b3edec1f23c48fe9e"
+  }
+}

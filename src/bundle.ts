@@ -1,13 +1,17 @@
 import * as vscode from 'vscode';
+import {bundle} from 'typings-core';
 
 export var bundleCommand = {
   name: 'typings.bundle',
-  fn: function bundle(context) {
+  fn: function bundleFn(context: vscode.ExtensionContext): void {
     if (!vscode.workspace.rootPath) {
       vscode.window.showInformationMessage('No folder opened');
       return;
     }
 
-    vscode.window.showInformationMessage('Will be ready real soon!');
-  }
+    bundle({ cwd: vscode.workspace.rootPath, ambient: false, out: 'test' })
+      .then(() => {
+        vscode.window.showInformationMessage('Bundle completed');
+      });
+  },
 };

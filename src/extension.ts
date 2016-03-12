@@ -21,16 +21,16 @@ export function activate(context: vscode.ExtensionContext) {
     listCommand,
     runAnyCommand,
     searchCommand,
-    uninstallCommand
+    uninstallCommand,
   ];
 
   context.subscriptions.concat(commands.map((command) => {
     return vscode.commands.registerCommand(command.name, () => {
       command.fn(context);
-    })
+    });
   }));
 }
 
-// this method is called when your extension is deactivated
-export function deactivate() {
-}
+// // this method is called when your extension is deactivated
+// export function deactivate(): void {
+// }
