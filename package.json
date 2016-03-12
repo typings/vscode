@@ -37,7 +37,7 @@
       },
       {
         "command": "typings.init",
-        "title": "Typings : Initialize 'typings.json'"
+        "title": "Typings : Initialize typings.json"
       },
       {
         "command": "typings.uninstall",
