@@ -10,7 +10,7 @@ before_install:
       sh -e /etc/init.d/xvfb start;
       sleep 3;
     fi
-
+  - npm install -g typings
 install:
   - npm install
   - typings install
